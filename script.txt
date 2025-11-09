@@ -1,0 +1,111 @@
+-- =====================================================
+-- BASE DE DATOS DE AGENCIA DE VIAJES
+-- Normalizada hasta 3FN para Oracle
+-- =====================================================
+
+-- TABLA: SUCURSAL
+-- Almacena información de cada sucursal de la cadena
+CREATE TABLE SUCURSAL (
+    cod_sucursal VARCHAR2(10) PRIMARY KEY,
+    nombre VARCHAR2(200) NOT NULL,
+    direccion VARCHAR2(200) NOT NULL,
+    telefono VARCHAR2(20) NOT NULL
+);
+
+-- TABLA: HOTEL
+-- Almacena hoteles contratados exclusivamente por la cadena
+CREATE TABLE HOTEL (
+    cod_hotel VARCHAR2(10) PRIMARY KEY,
+    nombre VARCHAR2(100) NOT NULL,
+    direccion VARCHAR2(200) NOT NULL,
+    ciudad VARCHAR2(100) NOT NULL,
+    telefono VARCHAR2(20) NOT NULL,
+    num_plazas_disponibles NUMBER(5) NOT NULL CHECK (num_plazas_disponibles >= 0)
+);
+
+-- TABLA: VUELO
+-- Almacena vuelos regulares contratados exclusivamente
+CREATE TABLE VUELO (
+    num_vuelo VARCHAR2(10) PRIMARY KEY,
+    fecha_hora TIMESTAMP NOT NULL,
+    origen VARCHAR2(100) NOT NULL,
+    destino VARCHAR2(100) NOT NULL,
+    plazas_totales NUMBER(5) NOT NULL CHECK (plazas_totales > 0),
+    plazas_clase_turista NUMBER(5) NOT NULL,
+    CONSTRAINT chk_plazas_vuelo CHECK (plazas_clase_turista <= plazas_totales)
+);
+
+-- TABLA: PAIS
+-- Catálogo de países (normalización de país de residencia)
+CREATE TABLE PAIS (
+    cod_pais VARCHAR2(3) PRIMARY KEY,
+    nombre_pais VARCHAR2(100) NOT NULL UNIQUE
+);
+
+-- TABLA: TURISTA
+-- Información principal del turista
+CREATE TABLE TURISTA (
+    cod_turista VARCHAR2(10) PRIMARY KEY,
+    nombre1 VARCHAR2(50) NOT NULL,
+    nombre2 VARCHAR2(50),
+    nombre3 VARCHAR2(50),
+    apellido1 VARCHAR2(50) NOT NULL,
+    apellido2 VARCHAR2(50),
+    direccion VARCHAR2(200) NOT NULL,
+    cod_pais VARCHAR2(3) NOT NULL,
+    cod_sucursal VARCHAR2(10) NOT NULL,
+    CONSTRAINT fk_turista_pais FOREIGN KEY (cod_pais) REFERENCES PAIS(cod_pais),
+    CONSTRAINT fk_turista_sucursal FOREIGN KEY (cod_sucursal) REFERENCES SUCURSAL(cod_sucursal)
+);
+
+-- TABLA: TELEFONO_TURISTA
+-- Normalización: múltiples teléfonos por turista (1FN)
+CREATE TABLE TELEFONO_TURISTA (
+    cod_turista VARCHAR2(10),
+    telefono VARCHAR2(20),
+    id NUMBER,
+    tipo_telefono VARCHAR2(20) DEFAULT 'PRINCIPAL',
+    CONSTRAINT pk_telefono_turista PRIMARY KEY (cod_turista, telefono),
+    CONSTRAINT fk_telefono_turista FOREIGN KEY (cod_turista) REFERENCES TURISTA(cod_turista) ON DELETE CASCADE
+);
+
+-- TABLA: EMAIL_TURISTA
+-- Normalización: múltiples correos electrónicos por turista (1FN)
+CREATE TABLE EMAIL_TURISTA (
+    cod_turista VARCHAR2(10),
+    email VARCHAR2(100),
+    id NUMBER,
+    tipo_email VARCHAR2(20) DEFAULT 'PERSONAL',
+    CONSTRAINT pk_email_turista PRIMARY KEY (cod_turista, email),
+    CONSTRAINT fk_email_turista FOREIGN KEY (cod_turista) REFERENCES TURISTA(cod_turista) ON DELETE CASCADE,
+    CONSTRAINT chk_email_formato CHECK (REGEXP_LIKE(email, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$'))
+);
+
+-- TABLA: RESERVA_VUELO
+-- Relación entre turista y vuelo (muchos a muchos)
+CREATE TABLE RESERVA_VUELO (
+    cod_reserva_vuelo VARCHAR2(15) PRIMARY KEY,
+    cod_turista VARCHAR2(10) NOT NULL,
+    num_vuelo VARCHAR2(10) NOT NULL,
+    clase_vuelo VARCHAR2(10) NOT NULL CHECK (clase_vuelo IN ('TURISTA', 'PRIMERA')),
+    fecha_reserva DATE DEFAULT SYSDATE NOT NULL,
+    estado VARCHAR2(20) DEFAULT 'CONFIRMADA' CHECK (estado IN ('CONFIRMADA', 'CANCELADA', 'PENDIENTE')),
+    CONSTRAINT fk_reserva_vuelo_turista FOREIGN KEY (cod_turista) REFERENCES TURISTA(cod_turista),
+    CONSTRAINT fk_reserva_vuelo_vuelo FOREIGN KEY (num_vuelo) REFERENCES VUELO(num_vuelo)
+);
+
+-- TABLA: HOSPEDAJE
+-- Relación entre turista y hotel con información de estadía
+CREATE TABLE HOSPEDAJE (
+    cod_hospedaje VARCHAR2(15) PRIMARY KEY,
+    cod_turista VARCHAR2(10) NOT NULL,
+    cod_hotel VARCHAR2(10) NOT NULL,
+    fecha_llegada DATE NOT NULL,
+    fecha_partida DATE NOT NULL,
+    regimen VARCHAR2(20) NOT NULL CHECK (regimen IN ('MEDIA_PENSION', 'PENSION_COMPLETA')),
+    fecha_reserva DATE DEFAULT SYSDATE NOT NULL,
+    estado VARCHAR2(20) DEFAULT 'CONFIRMADA' CHECK (estado IN ('CONFIRMADA', 'CANCELADA', 'PENDIENTE')),
+    CONSTRAINT fk_hospedaje_turista FOREIGN KEY (cod_turista) REFERENCES TURISTA(cod_turista),
+    CONSTRAINT fk_hospedaje_hotel FOREIGN KEY (cod_hotel) REFERENCES HOTEL(cod_hotel),
+    CONSTRAINT chk_fechas_hospedaje CHECK (fecha_partida > fecha_llegada)
+);
