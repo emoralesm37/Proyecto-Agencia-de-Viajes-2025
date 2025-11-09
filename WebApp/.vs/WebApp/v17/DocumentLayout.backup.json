@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\views\\hospedaje\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:views\\hospedaje\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\views\\hospedaje\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:views\\hospedaje\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\views\\hospedaje\\guardar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:views\\hospedaje\\guardar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\data\\hospedajedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:data\\hospedajedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\models\\hospedaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:models\\hospedaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\data\\surcursaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:data\\surcursaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\views\\sucursal\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:views\\sucursal\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\views\\pais\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:views\\pais\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|c:\\users\\mahuerk\\desktop\\proyecto final base de datos\\nueva carpeta\\webapp\\data\\paisdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EFD095C-7F41-4F10-9331-D0CAA455B96F}|Proyectofinal.csproj|solutionrelative:data\\paisdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Hospedaje\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Hospedaje\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Hospedaje\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Hospedaje\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-06T04:19:16.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Hospedaje\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Hospedaje\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Hospedaje\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Hospedaje\\Editar.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAUwEkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-06T04:18:58.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hospedaje.cs",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Models\\Hospedaje.cs",
+              "RelativeDocumentMoniker": "Models\\Hospedaje.cs",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Models\\Hospedaje.cs",
+              "RelativeToolTip": "Models\\Hospedaje.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T04:10:09.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Guardar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Hospedaje\\Guardar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Hospedaje\\Guardar.cshtml",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Hospedaje\\Guardar.cshtml",
+              "RelativeToolTip": "Views\\Hospedaje\\Guardar.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-06T04:06:25.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HospedajeData.cs",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Data\\HospedajeData.cs",
+              "RelativeDocumentMoniker": "Data\\HospedajeData.cs",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Data\\HospedajeData.cs",
+              "RelativeToolTip": "Data\\HospedajeData.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAwwJYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T04:04:40.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SurcursalData.cs",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Data\\SurcursalData.cs",
+              "RelativeDocumentMoniker": "Data\\SurcursalData.cs",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Data\\SurcursalData.cs",
+              "RelativeToolTip": "Data\\SurcursalData.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAcwIkAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T04:01:21.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Sucursal\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sucursal\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Sucursal\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Sucursal\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-06T04:01:07.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Pais\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pais\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Views\\Pais\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Pais\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-06T04:00:39.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaisData.cs",
+              "DocumentMoniker": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Data\\PaisData.cs",
+              "RelativeDocumentMoniker": "Data\\PaisData.cs",
+              "ToolTip": "C:\\Users\\Mahuerk\\Desktop\\PROYECTO FINAL BASE DE DATOS\\Nueva carpeta\\WebApp\\Data\\PaisData.cs",
+              "RelativeToolTip": "Data\\PaisData.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwEoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T03:59:51.24Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

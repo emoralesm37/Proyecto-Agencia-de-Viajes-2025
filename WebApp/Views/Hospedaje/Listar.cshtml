@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Lista de hospedaje
+    </div>
+    <div class="card-body">
+        <a asp-action="Guardar" asp-controller="Hospedaje" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Codigo turista</th>
+                    <th>Codigo hotel</th>
+                    <th>Fecha llegada</th>
+                    <th>Fecha partida</th>
+                    <th>Regimen</th>
+                    <th>Fecha reserva</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CodigoHospedaje</td>
+                        <td>@item.CodigoTurista</td>
+                        <td>@item.CodigoHotel</td>
+                        <td>@item.FechaLlegada</td>
+                        <td>@item.FechaPartida</td>
+                        <td>@item.Regimen</td>
+                        <td>@item.FechaReserva </td>
+                        <td>@item.Estado</td>
+                        <td>
+                            <a asp-action="Editar" asp-controller="Hospedaje" class="btn btn-primary btn-sm" asp-route-CodigoHospedaje="@item.CodigoHospedaje">Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Hospedaje" class="btn btn-danger btn-sm" asp-route-CodigoHospedaje="@item.CodigoHospedaje">Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

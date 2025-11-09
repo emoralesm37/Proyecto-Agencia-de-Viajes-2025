@@ -1,0 +1,55 @@
+﻿@using Proyectofinal.Models
+@model Vuelo
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Editar vuelo
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Editar" asp-controller="Vuelo" method="post">
+
+            <input asp-for="Num_vuelo" type="hidden" class="form-control">
+            <div class="mb-3">
+                <label class="form-label">Codigo</label>
+                <input asp-for="Num_vuelo" type="text" class="form-control">
+                <span asp-validation-for="Num_vuelo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha Hora:</label>
+                <input asp-for="FechaHora" type="date" class="form-control" />
+                <span asp-validation-for="FechaHora" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Origen</label>
+                <input asp-for="Origen" type="text" class="form-control">
+                <span asp-validation-for="Origen" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Destino</label>
+                <input asp-for="Destino" type="text" class="form-control">
+                <span asp-validation-for="Destino" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Plazas Totales</label>
+                <input asp-for="PlazasTotales" type="text" class="form-control">
+                <span asp-validation-for="PlazasTotales" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Plazas Clase Turista</label>
+                <input asp-for="PlazasClaseTurista" type="text" class="form-control">
+                <span asp-validation-for="PlazasClaseTurista" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Vuelo" class="btn btn-warning">Volver a la lista</a>
+        </form>
+
+
+    </div>
+</div>
+

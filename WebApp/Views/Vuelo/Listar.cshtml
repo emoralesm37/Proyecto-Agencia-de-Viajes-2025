@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Lista vuelos
+    </div>
+    <div class="card-body">
+        <a asp-action="Guardar" asp-controller="Vuelo" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Fecha Hora</th>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>Plazas Totales</th>
+                    <th>Plazas Clase Turista</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Num_vuelo</td>
+                        <td>@item.FechaHora</td>
+                        <td>@item.Origen</td>
+                        <td>@item.Destino</td>
+                        <td>@item.PlazasTotales</td>
+                        <td>@item.PlazasClaseTurista</td>
+ 
+                        <td>
+                            <a asp-action="Editar" asp-controller="Vuelo" class="btn btn-primary btn-sm" asp-route-Num_vuelo="@item.Num_vuelo">Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Vuelo" class="btn btn-danger btn-sm" asp-route-Num_vuelo="@item.Num_vuelo">Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

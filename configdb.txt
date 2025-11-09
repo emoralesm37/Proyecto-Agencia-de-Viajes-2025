@@ -1,0 +1,25 @@
+--ejecutar esto en sqlplus mi_password en la contraseña que definieron
+sys/mi_password as sysdba
+
+
+--ejecutar esto
+CREATE USER UMGUSER IDENTIFIED BY App123;
+GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE TO UMGUSER;
+ALTER USER UMGUSER QUOTA UNLIMITED ON USERS;
+
+--verificar en sqlplus 
+UMGUSER/App123@//localhost:1521/XEPDB1
+
+Esto por que la cadena en el programas usa
+user = UMGUSER y la contraseña = App123
+
+
+una vez creado la bd ejecutar el escript que esta en script2.txt
+
+
+
+Proyecto Final Base de datos:
+	Tecnologías:
+	IDE: Visual Studio 2022
+	Framework: .NET 8
+	Tipo de proyecto: ASP.Net Core MVC

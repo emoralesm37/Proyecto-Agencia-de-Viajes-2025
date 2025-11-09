@@ -1,0 +1,30 @@
+﻿@using Proyectofinal.Models
+@model Vuelo
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Eliminar hotel
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Eliminar" asp-controller="Vuelo" method="post">
+
+            <input asp-for="Num_vuelo" type="hidden" class="form-control">
+
+            <div class="alert alert-danger" role="alert">
+                ¿Desea eliminar el vuelo con el código : @Html.DisplayTextFor(m => m.Num_vuelo) ?
+            </div>
+
+            <button type="submit" class="btn btn-danger">Elimnar</button>
+            <a asp-action="Listar" asp-controller="Vuelo" class="btn btn-warning">Volver a la lista</a>
+        </form>
+
+
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+﻿@using Proyectofinal.Models
+@model Pais
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Eliminar pais
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Eliminar" asp-controller="Pais" method="post">
+
+            <input asp-for="CodigoPais" type="hidden" class="form-control">
+
+            <div class="alert alert-danger" role="alert">
+                ¿Desea eliminar el pais : @Html.DisplayTextFor(m => m.Nombre) ?
+            </div>
+
+            <button type="submit" class="btn btn-danger">Elimnar</button>
+            <a asp-action="Listar" asp-controller="Pais" class="btn btn-warning">Volver a la lista</a>
+        </form>
+
+
+    </div>
+</div>

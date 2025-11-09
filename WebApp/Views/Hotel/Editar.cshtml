@@ -1,0 +1,51 @@
+﻿@using Proyectofinal.Models
+@model HOTEL
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        Editar hotel
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Editar" asp-controller="Hotel" method="post">
+
+            <input asp-for="COD_HOTEL" type="hidden" class="form-control">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input asp-for="NOMBRE" type="text" class="form-control">
+                <span asp-validation-for="NOMBRE" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Dirección</label>
+                <input asp-for="DIRECCION" type="text" class="form-control">
+                <span asp-validation-for="DIRECCION" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ciudad:</label>
+                <input asp-for="CIUDAD" type="text" class="form-control">
+                <span asp-validation-for="CIUDAD" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Telefono:</label>
+                <input asp-for="TELEFONO" type="text" class="form-control">
+                <span asp-validation-for="TELEFONO" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Plazas:</label>
+                <input asp-for="NUM_PLAZAS_DISPONIBLES" type="number" class="form-control">
+                <span asp-validation-for="NUM_PLAZAS_DISPONIBLES" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Hotel" class="btn btn-warning">Volver a la lista</a>
+        </form>
+
+
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿@using Proyectofinal.Models
+@model Sucursal
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Registra sucursal
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Guardar" asp-controller="Sucursal" method="post">
+            <div class="mb-3">
+                <label class="form-label">Codigo</label>
+                <input asp-for="CodigoSucursal" type="text" class="form-control">
+                <span asp-validation-for="CodigoSucursal" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre:</label>
+                <input asp-for="Nombre" type="text" class="form-control">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Direccion:</label>
+                <input asp-for="Direccion" type="text" class="form-control">
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Telefono:</label>
+                <input asp-for="Telefon" type="text" class="form-control">
+                <span asp-validation-for="Telefon" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Sucursal" class="btn btn-warning">Volver a la lista</a>
+        </form>
+
+
+    </div>
+</div>
+

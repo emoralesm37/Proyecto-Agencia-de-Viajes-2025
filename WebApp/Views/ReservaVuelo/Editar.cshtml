@@ -1,0 +1,56 @@
+﻿@using Proyectofinal.Models
+@model ReservaVuelo
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Editar reserva
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Editar" asp-controller="ReservaVuelo" method="post">
+
+            <input asp-for="CodigoReservaVuelo" type="hidden" class="form-control">
+            <div class="mb-3">
+                <label class="form-label">Codigo</label>
+                <input asp-for="CodigoReservaVuelo" type="text" class="form-control">
+                <span asp-validation-for="CodigoReservaVuelo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Turista:</label>
+                <input asp-for="CodigoTurista" type="text" class="form-control">
+                <span asp-validation-for="CodigoTurista" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">No. vuelo:</label>
+                <input asp-for="NumeroVuelo" type="text" class="form-control">
+                <span asp-validation-for="NumeroVuelo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Clase:</label>
+                <input asp-for="ClaseVuelo" type="text" class="form-control">
+                <span asp-validation-for="ClaseVuelo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha Reserva:</label>
+                <input asp-for="FechaReserva" type="text" class="form-control">
+                <span asp-validation-for="FechaReserva" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Estado:</label>
+                <input asp-for="Estado" type="text" class="form-control">
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="ReservaVuelo" class="btn btn-warning">Volver a la lista</a>
+        </form>
+
+
+    </div>
+</div>
+

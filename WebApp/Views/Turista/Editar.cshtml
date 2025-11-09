@@ -1,0 +1,85 @@
+﻿@using Proyectofinal.Models
+@model TURISTA
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        Editar turista
+    </div>
+    <div class="card-body">
+        <form asp-action="Editar" asp-controller="Turista" method="post">
+            <!-- Campo oculto para el ID -->
+            @* <input asp-for="COD_TURISTA" type="hidden" class="form-control"> *@
+
+            <div class="mb-3">
+                <label class="form-label">Código</label>
+                <input asp-for="COD_TURISTA" type="text" class="form-control" readonly>
+                <span asp-validation-for="COD_TURISTA" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Primer nombre:</label>
+                <input asp-for="NOMBRE1" type="text" class="form-control">
+                <span asp-validation-for="NOMBRE1" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Segundo nombre</label>
+                <input asp-for="NOMBRE2" type="text" class="form-control">
+                <span asp-validation-for="NOMBRE2" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Tercer nombre</label>
+                <input asp-for="NOMBRE3" type="text" class="form-control">
+                <span asp-validation-for="NOMBRE3" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Primer apellido</label>
+                <input asp-for="APELLIDO1" type="text" class="form-control">
+                <span asp-validation-for="APELLIDO1" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Segundo apellido</label>
+                <input asp-for="APELLIDO2" type="text" class="form-control">
+                <span asp-validation-for="APELLIDO2" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Dirección</label>
+                <input asp-for="DIRECCION" type="text" class="form-control">
+                <span asp-validation-for="DIRECCION" class="text-danger"></span>
+            </div>
+
+            <!-- Dropdown para País -->
+            <div class="mb-3">
+                <label class="form-label">País</label>
+                <select asp-for="COD_PAIS" asp-items="ViewBag.Paises" class="form-control">
+                    <option value="">Seleccione un país</option>
+                </select>
+                <span asp-validation-for="COD_PAIS" class="text-danger"></span>
+            </div>
+
+            <!-- Dropdown para Sucursal -->
+            <div class="mb-3">
+                <label class="form-label">Sucursal</label>
+                <select asp-for="COD_SUCURSAL" asp-items="ViewBag.Sucursales" class="form-control">
+                    <option value="">Seleccione una sucursal</option>
+                </select>
+                <span asp-validation-for="COD_SUCURSAL" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="Turista" class="btn btn-warning">Volver a la lista</a>
+        </form>
+    </div>
+</div>
+
+
+
